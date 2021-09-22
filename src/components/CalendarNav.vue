@@ -6,6 +6,7 @@
       <!--Move prev button-->
       <span
         role="button"
+        tabindex="0"
         class="vc-nav-arrow is-left"
         :class="{ 'is-disabled': !prevItemsEnabled }"
         :tabindex="prevItemsEnabled ? 0 : undefined"
@@ -19,6 +20,7 @@
       <!--Mode switch button-->
       <span
         role="button"
+        tabindex="0"
         class="vc-nav-title vc-grid-focus"
         :style="{ whiteSpace: 'nowrap' }"
         tabindex="0"
