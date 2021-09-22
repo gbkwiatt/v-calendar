@@ -35,7 +35,7 @@ export default {
               h('span', {
                 role: 'button',
                 class: ['vc-nav-arrow', 'is-left', { 'is-disabled': !this.prevItemsEnabled }],
-                tabindex: this.prevItemsEnabled ? 0 : undefined,
+                tabindex: this.prevItemsEnabled ? '0' : '-1',
                 on: {
                   click: this.movePrev,
                   keydown: e => this.onSpaceOrEnter(e, this.movePrev),
@@ -64,7 +64,7 @@ export default {
               h('span', {
                 role: 'button',
                 class: ['vc-nav-arrow', 'is-right', { 'is-disabled': !this.nextItemsEnabled }],
-                tabindex: this.nextItemsEnabled ? 0 : undefined,
+                tabindex: this.nextItemsEnabled ? '0' : '-1',
                 on: {
                   click: this.moveNext,
                   keydown: e => this.onSpaceOrEnter(e, this.moveNext),
@@ -87,7 +87,7 @@ export default {
                 dataId: item.id,
                 ariaLabel: item.ariaLabel,
                 class: this.getItemClasses(item),
-                tabIndex: '0',
+                tabindex: '0',
                 on: {
                   click: item.click,
                   keydown: (e) => this.onSpaceOrEnter(e, item.click)

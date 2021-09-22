@@ -6,10 +6,9 @@
       <!--Move prev button-->
       <span
         role="button"
-        tabindex="0"
         class="vc-nav-arrow is-left"
         :class="{ 'is-disabled': !prevItemsEnabled }"
-        :tabindex="prevItemsEnabled ? 0 : undefined"
+        :tabindex="prevItemsEnabled ? '0' : '-1'"
         @click="movePrev"
         @keydown="e => onSpaceOrEnter(e, movePrev)"
       >
@@ -23,7 +22,6 @@
         tabindex="0"
         class="vc-nav-title vc-grid-focus"
         :style="{ whiteSpace: 'nowrap' }"
-        tabindex="0"
         @click="toggleMode"
         @keydown="e => onSpaceOrEnter(e, toggleMode)"
       >
@@ -34,7 +32,7 @@
         role="button"
         class="vc-nav-arrow is-right"
         :class="{ 'is-disabled': !nextItemsEnabled }"
-        :tabindex="nextItemsEnabled ? 0 : undefined"
+        :tabindex="nextItemsEnabled ? '0' : '-1'"
         @click="moveNext"
         @keydown="e => onSpaceOrEnter(e, moveNext)"
       >
