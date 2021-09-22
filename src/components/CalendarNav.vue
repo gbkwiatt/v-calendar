@@ -52,7 +52,7 @@
         :data-id="item.id"
         :aria-label="item.ariaLabel"
         :class="getItemClasses(item)"
-        :tabindex="item.isDisabled ? undefined : 0"
+        :tabindex="item.isDisabled ? '-1' : '0'"
         @click="item.click"
         @keydown="e => onSpaceOrEnter(e, item.click)"
       >
