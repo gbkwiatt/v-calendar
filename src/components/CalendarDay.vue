@@ -183,9 +183,9 @@ export default {
     },
     dayContentProps() {
       let tabindex;
-      if (this.day.isFocusable) {
+      if (!this.day.isDisabled) {
         tabindex = '0';
-      } else if (this.day.inMonth) {
+      } else if (this.day.isDisabled || this.day.inMonth) {
         tabindex = '-1';
       }
       return {
