@@ -77,9 +77,9 @@ export default {
     });
     // Renderer for calendar arrows
     const getArrowButton = isPrev => {
-      const click = () => this.move(isPrev ? -this.step_ : this.step_);
-      const keydown = e => onSpaceOrEnter(e, click);
       const isDisabled = isPrev ? !this.canMovePrev : !this.canMoveNext;
+      const click = () => isDisabled ? null : this.move(isPrev ? -this.step_ : this.step_);
+      const keydown = e => onSpaceOrEnter(e, click);
       return h(
         'div',
         {
