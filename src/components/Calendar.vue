@@ -413,6 +413,8 @@ export default {
         },
         this.$defaults.touch,
       );
+      const today = this.$refs.vcToday;
+      if (today) today.focus();
       // Clean up on destroy
       this.$once('beforeDestroy', () => removeHandlers());
     }

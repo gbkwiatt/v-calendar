@@ -15,6 +15,7 @@ export default {
         'div',
         {
           class: 'vc-highlights vc-day-layer',
+          ref: 'vcToday'
         },
         this.backgrounds.map(({ key, wrapperClass, class: bgClass, style }) =>
           h(
